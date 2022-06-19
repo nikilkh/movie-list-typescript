@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0em;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .moviescontainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 90%;
+    height: max-content;
+    row-gap: 48px;
+    column-gap: 75px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .movie {
+    position: relative;
+    background-repeat: no-repeat;
+    height: 374px;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 53.52px;
+    box-shadow: 10px 10px 20px #888888;
+    z-index: 0;
+  }
+  
+  .movie:hover:after {
+    content: "";
+    position: absolute;
+    height: 374px;
+    width: 350px;
+    border-radius: 20px;
+    top: 0px;
+    left: 0px;
+    background-color: #62626299;
+    opacity: 0.6;
+    z-index: 1;
+  }
+  
+  .readmore {
+    display: none;
+    background-color: #352c9a;
+    font-family: "Rubik", sans-serif;
+    color: white;
+    padding: 12px 34px;
+    cursor: pointer;
+  }
+  
+  .movie:hover .readmore {
+    display: block;
+    z-index: 2;
+  }
+  
+  .movie:hover .movietitle {
+    display: block;
+    z-index: 2;
+  }
+  
+  .readmore:active {
+    text-decoration: underline;
+  }
+  
+  .readmore:disabled {
+    background: #626262;
+  }
+  
+  .readmore:hover {
+    background-color: #724fd8;
+  }
+  
+  .movietitle {
+    display: none;
+    color: #ffffff;
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.44px;
+    letter-spacing: 0.004em;
+    margin-top: 180px;
+    text-align: center;
+  }
+  
+  .noResultDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+  
+  .noResultDiv h2 {
+    font-family: rubik;
+    text-align: center;
+    margin: 50px;
+    font-size: 32px;
+  }
+  
+  .noResultDiv img {
+    width: 80%;
+    height: 80%;
+  }
+  
